@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="#D0E4D9"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <!-- Player Info Column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Team Logo -->
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/rounded_background"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!-- Team Name -->
+            <TextView
+                android:id="@+id/teamNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Nrr"
+                android:textColor="#137643"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Played (P) -->
+        <TextView
+            android:id="@+id/playedTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nrr"
+            android:textColor="#137643"
+            android:textStyle="bold" />
+
+        <!-- Wins (W) -->
+        <TextView
+            android:id="@+id/winsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nrr"
+            android:textColor="#137643"
+            android:textStyle="bold" />
+
+        <!-- Losses (L) -->
+        <TextView
+            android:id="@+id/lossesTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nrr"
+            android:textColor="#137643"
+            android:textStyle="bold" />
+
+        <!-- No Result (NR) -->
+        <TextView
+            android:id="@+id/noResultTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nrr"
+            android:textColor="#137643"
+            android:textStyle="bold" />
+
+        <!-- Points (Pts) -->
+        <TextView
+            android:id="@+id/pointsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nrr"
+            android:textColor="#137643"
+            android:textStyle="bold" />
+
+        <!-- Net Run Rate (NRR) -->
+        <TextView
+            android:id="@+id/nrrTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nrr"
+            android:textColor="#137643"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

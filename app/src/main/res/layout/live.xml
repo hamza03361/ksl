@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view">
+
+    <ImageView
+        android:id="@+id/topLeftImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:src="@drawable/mainscreenksltoplogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backImageView"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/backarrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menuImageView"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="35dp"
+        android:src="@drawable/mainactivitymenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/liveevent"
+        android:layout_width="260dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLeftImageView">
+
+        <ImageView
+            android:id="@+id/livematchImageView"
+            android:layout_width="260dp"
+            android:layout_height="120dp" />
+
+        <ImageView
+            android:id="@+id/smallImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="8dp"
+            android:src="@drawable/live" />
+
+    </FrameLayout>
+
+
+    <!-- Info ImageView Container -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/infoImageViewContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liveevent">
+
+        <TextView
+            android:id="@+id/teamateamb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="13dp"
+            android:text="Team A vs Team B"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/topLeftIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Top-left Icon inside infoImageView -->
+        <TextView
+            android:id="@+id/topLeftIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="50dp"
+            android:text="Kashmir Super League"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Top-right TextView inside infoImageView -->
+        <TextView
+            android:id="@+id/topRightTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="5dp"
+            android:text="Match 9, Kashmir Stadium"
+            android:textColor="#0E394C"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- ImageView below top-left icon -->
+        <ImageView
+            android:id="@+id/belowTopLeftIconImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_background"
+            android:padding="8dp"
+            android:src="@drawable/mainscreenksltoplogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topLeftIcon" />
+
+        <!-- TextView to the right of below top-left icon ImageView -->
+        <TextView
+            android:id="@+id/rightOfBelowTopLeftIconTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="115dp"
+            android:text="145/8"
+            android:textColor="#0E394C"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/belowTopLeftIconImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/belowrightOfBelowTopLeftIconTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:text="20 Ov"
+            android:textColor="#A2D317"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/belowTopLeftIconImageView"
+            app:layout_constraintTop_toBottomOf="@id/rightOfBelowTopLeftIconTextView" />
+
+        <!-- VS TextView between rightOfBelowTopLeftIconTextView and leftOfBelowTopRightImageViewTextView -->
+        <TextView
+            android:id="@+id/vsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="120dp"
+            android:text="VS"
+            android:textColor="#0E394C"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/leftOfBelowTopRightImageViewTextView"
+            app:layout_constraintStart_toEndOf="@id/rightOfBelowTopLeftIconTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- TextView to the left of below top-right ImageView -->
+        <TextView
+            android:id="@+id/leftOfBelowTopRightImageViewTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="115dp"
+            android:layout_marginEnd="8dp"
+            android:text="122/6"
+            android:textColor="#0E394C"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/belowTopRightImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Another TextView below the leftOfBelowTopRightImageViewTextView -->
+        <TextView
+            android:id="@+id/belowLeftOfBelowTopRightImageViewTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="17.1 Ov"
+            android:textColor="#A2D317"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/leftOfBelowTopRightImageViewTextView"
+            app:layout_constraintTop_toBottomOf="@id/leftOfBelowTopRightImageViewTextView" />
+
+        <!-- ImageView below top-right TextView -->
+        <ImageView
+            android:id="@+id/belowTopRightImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rounded_background"
+            android:padding="8dp"
+            android:src="@drawable/mainscreenksltoplogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topRightTextView" />
+
+        <!-- TextView below VS TextView -->
+        <TextView
+            android:id="@+id/sANeedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="S.A need 11 runs to win on 7 balls"
+            android:textColor="#0E394C"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vsTextView" />
+
+        <!-- TextView for "CRR: 11.12" -->
+        <TextView
+            android:id="@+id/crrTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:text="CRR: 11.12"
+            android:textColor="#0E394C"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sANeedTextView" />
+
+        <!-- TextView for "RR: 15.12" -->
+        <TextView
+            android:id="@+id/rrTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="100dp"
+            android:text="RR: 15.12"
+            android:textColor="#A2D317"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sANeedTextView" />
+
+        <ImageView
+            android:id="@+id/lineImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rrTextView" />
+
+        <!-- New ImageView below lineImageView on the left side -->
+        <ImageView
+            android:id="@+id/leftImageView"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/rightsideimage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineImageView" />
+
+        <!-- New TextViews below leftImageView -->
+        <TextView
+            android:id="@+id/leftTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="text1"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/leftImageView" />
+
+        <TextView
+            android:id="@+id/leftTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:text="text2"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/leftTextView1"
+            app:layout_constraintTop_toBottomOf="@id/leftImageView" />
+
+        <TextView
+            android:id="@+id/leftTextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:text="text3"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/leftTextView2"
+            app:layout_constraintTop_toBottomOf="@id/leftImageView" />
+
+        <TextView
+            android:id="@+id/leftTextView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="text4"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/leftTextView1" />
+
+        <TextView
+            android:id="@+id/leftTextView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:text="text5"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/leftTextView1"
+            app:layout_constraintTop_toBottomOf="@id/leftTextView2" />
+
+        <TextView
+            android:id="@+id/leftTextView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:text="text6"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/leftTextView2"
+            app:layout_constraintTop_toBottomOf="@id/leftTextView3" />
+
+        <!-- New ImageView below lineImageView on the right side -->
+        <ImageView
+            android:id="@+id/rightImageView"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/leftsidesimage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineImageView" />
+
+        <!-- New TextViews below rightImageView -->
+        <TextView
+            android:id="@+id/rightTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="text1"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rightImageView" />
+
+        <TextView
+            android:id="@+id/rightTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:text="text2"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/rightTextView1"
+            app:layout_constraintTop_toBottomOf="@id/rightImageView" />
+
+        <TextView
+            android:id="@+id/rightTextView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:text="text3"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/rightTextView2"
+            app:layout_constraintTop_toBottomOf="@id/rightImageView" />
+
+        <TextView
+            android:id="@+id/rightTextView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="text4"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rightTextView1" />
+
+        <TextView
+            android:id="@+id/rightTextView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:text="text5"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/rightTextView1"
+            app:layout_constraintTop_toBottomOf="@id/rightTextView2" />
+
+        <TextView
+            android:id="@+id/rightTextView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:text="text6"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/rightTextView2"
+            app:layout_constraintTop_toBottomOf="@id/rightTextView3" />
+
+        <ImageView
+            android:id="@+id/lineImageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rightTextView6" />
+
+        <TextView
+            android:id="@+id/winprobabilitytextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="100dp"
+            android:text="LIVE WIN PROBABILITY"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lineImageView2" />
+
+        <TextView
+            android:id="@+id/teamAprobabilitytextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="2dp"
+            android:text="Team A"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/winprobabilitytextview" />
+
+        <TextView
+            android:id="@+id/teamAprobabilitynumbertextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="4dp"
+            android:text="77 %"
+            android:textColor="#E96B02"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/teamAprobabilitytextview" />
+
+        <TextView
+            android:id="@+id/teamBprobabilitytextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="30dp"
+            android:text="Team B"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/winprobabilitytextview" />
+
+        <TextView
+            android:id="@+id/teamBprobabilitynumbertextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="40dp"
+            android:text="23 %"
+            android:textColor="#6EA541"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/teamBprobabilitytextview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- BottomNavigationView -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_bottom_navigation"
+        app:itemIconTint="@color/menu_item_color"
+        app:itemTextAppearanceActive="@style/BottomNavigationView.ActiveText"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView.InactiveText"
+        app:itemTextColor="@color/menu_item_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

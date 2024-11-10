@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parents"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Scrollable content above the BottomNavigationView -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Top-left ImageView -->
+            <ImageView
+                android:id="@+id/topLeftImageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/mainscreenksltoplogo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Top-right Menu ImageView -->
+            <ImageView
+                android:id="@+id/menuImageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="35dp"
+                android:src="@drawable/mainactivitymenu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- TextView for "Today's Match" -->
+            <TextView
+                android:id="@+id/todaysMatchTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Today's Match"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/topLeftImageView" />
+
+            <!-- Info ImageView Container -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/infoImageViewContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/rectangle_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/todaysMatchTextView">
+
+                <!-- Top-left Icon inside infoImageView -->
+                <ImageView
+                    android:id="@+id/topLeftIcon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/live"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Top-right TextView inside infoImageView -->
+                <TextView
+                    android:id="@+id/topRightTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="Match 9, Kashmir Stadium"
+                    android:textColor="#A2D317"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- ImageView below top-left icon -->
+                <ImageView
+                    android:id="@+id/belowTopLeftIconImageView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="8dp"
+                    android:src="@drawable/mainscreenksltoplogo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/topLeftIcon" />
+
+                <!-- TextView to the right of below top-left icon ImageView -->
+                <TextView
+                    android:id="@+id/rightOfBelowTopLeftIconTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="95dp"
+                    android:text="145/8"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/belowTopLeftIconImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/belowrightOfBelowTopLeftIconTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:text="20 Ov"
+                    android:textColor="#A2D317"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/belowTopLeftIconImageView"
+                    app:layout_constraintTop_toBottomOf="@id/rightOfBelowTopLeftIconTextView" />
+
+                <!-- VS TextView between rightOfBelowTopLeftIconTextView and leftOfBelowTopRightImageViewTextView -->
+                <TextView
+                    android:id="@+id/vsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="100dp"
+                    android:text="VS"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/leftOfBelowTopRightImageViewTextView"
+                    app:layout_constraintStart_toEndOf="@id/rightOfBelowTopLeftIconTextView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- TextView to the left of below top-right ImageView -->
+                <TextView
+                    android:id="@+id/leftOfBelowTopRightImageViewTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="95dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="122/6"
+                    android:textColor="#FDFDFD"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/belowTopRightImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Another TextView below the leftOfBelowTopRightImageViewTextView -->
+                <TextView
+                    android:id="@+id/belowLeftOfBelowTopRightImageViewTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="17.1 Ov"
+                    android:textColor="#A2D317"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/leftOfBelowTopRightImageViewTextView"
+                    app:layout_constraintTop_toBottomOf="@id/leftOfBelowTopRightImageViewTextView" />
+
+                <!-- ImageView below top-right TextView -->
+                <ImageView
+                    android:id="@+id/belowTopRightImageView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/rounded_background"
+                    android:padding="8dp"
+                    android:src="@drawable/mainscreenksltoplogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/topRightTextView" />
+
+                <!-- TextView below VS TextView -->
+                <TextView
+                    android:id="@+id/sANeedTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="S.A need 11 runs to win on 7 balls"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@id/crrTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/vsTextView" />
+
+                <!-- TextView for "CRR: 11.12" -->
+                <TextView
+                    android:id="@+id/crrTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginBottom="18dp"
+                    android:text="CRR: 11.12"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- TextView for "RR: 15.12" -->
+                <TextView
+                    android:id="@+id/rrTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginBottom="18dp"
+                    android:text="RR: 15.12"
+                    android:textColor="#A2D317"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/bottomIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="Icon Below"
+                android:src="@drawable/expand"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infoImageViewContainer" />
+
+            <TextView
+                android:id="@+id/upcomingMatchesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:text="Upcoming Matches"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bottomIcon" />
+
+            <!-- TextView for "See All" aligned to the right of Upcoming Matches -->
+            <TextView
+                android:id="@+id/seeAllTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="See All"
+                android:textColor="#A2D317"
+                android:textSize="18dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/upcomingMatchesTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bottomIcon" />
+
+            <!-- TextView for "T20 16 of 48" below Upcoming Matches -->
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/matchesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="75dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/infoImageViewContainer" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- BottomNavigationView -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_bottom_navigation"
+        app:itemIconTint="@color/menu_item_color"
+        app:itemTextAppearanceActive="@style/BottomNavigationView.ActiveText"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView.InactiveText"
+        app:itemTextColor="@color/menu_item_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+

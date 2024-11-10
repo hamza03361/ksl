@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view">
+
+    <ImageView
+        android:id="@+id/topLeftImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:src="@drawable/mainscreenksltoplogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backImageView"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/backarrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menuImageView"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="35dp"
+        android:src="@drawable/mainactivitymenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- New ConstraintLayout for Buttons -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#137643"
+        android:backgroundTint="#137643"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLeftImageView">
+
+        <Button
+            android:id="@+id/pointsTableButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="3dp"
+            android:backgroundTint="#D0E4D9"
+            android:text="Points Table"
+            android:textColor="#137643"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/squadsButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/squadsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="3dp"
+            android:backgroundTint="#137643"
+            android:text="Squads"
+            android:textColor="#D0E4D9"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pointsTableButton"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Header Row -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="2dp"
+        android:background="#137643"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonsContainer">
+
+        <!-- Player Header -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="Team"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <!-- M Header -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="P"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <!-- Runs Header -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="W"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <!-- Avg Header -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="L"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="NR"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <!-- Runs Header -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Pts"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <!-- Avg Header -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nrr"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <!-- RecyclerView for Points Table -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pointsTableRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        tools:listitem="@layout/item_team" />
+
+    <!-- BottomNavigationView -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_bottom_navigation"
+        app:itemIconTint="@color/menu_item_color"
+        app:itemTextAppearanceActive="@style/BottomNavigationView.ActiveText"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView.InactiveText"
+        app:itemTextColor="@color/menu_item_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

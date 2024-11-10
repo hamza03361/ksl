@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Scrollable content above the BottomNavigationView -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/root_view">
+
+            <!-- Top-left ImageView -->
+            <ImageView
+                android:id="@+id/topLeftImageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/mainscreenksltoplogo"
+                app:layout_constraintEnd_toStartOf="@+id/menuImageView"
+                app:layout_constraintStart_toEndOf="@+id/backImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Top-right Menu ImageView -->
+            <ImageView
+                android:id="@+id/menuImageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="35dp"
+                android:src="@drawable/mainactivitymenu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/backImageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/backarrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+
+            <!-- Top-left Icon inside infoImageView -->
+            <ImageView
+                android:id="@+id/topLeftIcon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="16dp"
+                android:src="@drawable/live"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/backImageView" />
+
+            <!-- Top-right TextView inside infoImageView -->
+            <TextView
+                android:id="@+id/topRightTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:text="Match 9, Kashmir Stadium"
+                android:textColor="#A2D317"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menuImageView" />
+
+            <!-- ImageView below top-left icon -->
+            <ImageView
+                android:id="@+id/belowTopLeftIconImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/rounded_background"
+                android:padding="8dp"
+                android:src="@drawable/mainscreenksltoplogo"
+                app:layout_constraintBottom_toTopOf="@+id/leftImageView"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- TextView to the right of below top-left icon ImageView -->
+            <TextView
+                android:id="@+id/rightOfBelowTopLeftIconTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="155dp"
+                android:text="145/8"
+                android:textColor="#0E394C"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/belowTopLeftIconImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/belowrightOfBelowTopLeftIconTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:text="20 Ov"
+                android:textColor="#A2D317"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/belowTopLeftIconImageView"
+                app:layout_constraintTop_toBottomOf="@id/rightOfBelowTopLeftIconTextView" />
+
+            <!-- VS TextView between rightOfBelowTopLeftIconTextView and leftOfBelowTopRightImageViewTextView -->
+            <TextView
+                android:id="@+id/vsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="155dp"
+                android:text="VS"
+                android:textColor="#0E394C"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/leftOfBelowTopRightImageViewTextView"
+                app:layout_constraintStart_toEndOf="@id/rightOfBelowTopLeftIconTextView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- TextView to the left of below top-right ImageView -->
+            <TextView
+                android:id="@+id/leftOfBelowTopRightImageViewTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="155dp"
+                android:layout_marginEnd="8dp"
+                android:text="122/6"
+                android:textColor="#0E394C"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/belowTopRightImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Another TextView below the leftOfBelowTopRightImageViewTextView -->
+            <TextView
+                android:id="@+id/belowLeftOfBelowTopRightImageViewTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="17.1 Ov"
+                android:textColor="#A2D317"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/leftOfBelowTopRightImageViewTextView"
+                app:layout_constraintTop_toBottomOf="@id/leftOfBelowTopRightImageViewTextView" />
+
+            <!-- ImageView below top-right TextView -->
+            <ImageView
+                android:id="@+id/belowTopRightImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/rounded_background"
+                android:padding="8dp"
+                android:src="@drawable/mainscreenksltoplogo"
+                app:layout_constraintBottom_toTopOf="@+id/rightImageView"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- TextView below VS TextView -->
+            <TextView
+                android:id="@+id/sANeedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="S.A need 11 runs to win on 7 balls"
+                android:textColor="#0E394C"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vsTextView" />
+
+            <!-- TextView for "CRR: 11.12" -->
+            <TextView
+                android:id="@+id/crrTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:text="CRR: 11.12"
+                android:textColor="#0E394C"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sANeedTextView" />
+
+            <!-- TextView for "RR: 15.12" -->
+            <TextView
+                android:id="@+id/rrTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:text="RR: 15.12"
+                android:textColor="#A2D317"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sANeedTextView" />
+
+            <ImageView
+                android:id="@+id/lineImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rrTextView" />
+
+            <!-- New ImageView below lineImageView on the left side -->
+            <ImageView
+                android:id="@+id/leftImageView"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/rightsideimage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineImageView" />
+
+            <!-- New TextViews below leftImageView -->
+            <TextView
+                android:id="@+id/leftTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="text1"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/leftImageView" />
+
+            <TextView
+                android:id="@+id/leftTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="text2"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/leftTextView1"
+                app:layout_constraintTop_toBottomOf="@id/leftImageView" />
+
+            <TextView
+                android:id="@+id/leftTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="text3"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/leftTextView2"
+                app:layout_constraintTop_toBottomOf="@id/leftImageView" />
+
+            <TextView
+                android:id="@+id/leftTextView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="text4"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/leftTextView1" />
+
+            <TextView
+                android:id="@+id/leftTextView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="text5"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/leftTextView1"
+                app:layout_constraintTop_toBottomOf="@id/leftTextView2" />
+
+            <TextView
+                android:id="@+id/leftTextView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="text6"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/leftTextView2"
+                app:layout_constraintTop_toBottomOf="@id/leftTextView3" />
+
+            <!-- New ImageView below lineImageView on the right side -->
+            <ImageView
+                android:id="@+id/rightImageView"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/leftsidesimage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineImageView" />
+
+            <!-- New TextViews below rightImageView -->
+            <TextView
+                android:id="@+id/rightTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="text1"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rightImageView" />
+
+            <TextView
+                android:id="@+id/rightTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:text="text2"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/rightTextView1"
+                app:layout_constraintTop_toBottomOf="@id/rightImageView" />
+
+            <TextView
+                android:id="@+id/rightTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:text="text3"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/rightTextView2"
+                app:layout_constraintTop_toBottomOf="@id/rightImageView" />
+
+            <TextView
+                android:id="@+id/rightTextView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="text4"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rightTextView1" />
+
+            <TextView
+                android:id="@+id/rightTextView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:text="text5"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/rightTextView1"
+                app:layout_constraintTop_toBottomOf="@id/rightTextView2" />
+
+            <TextView
+                android:id="@+id/rightTextView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:text="text6"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/rightTextView2"
+                app:layout_constraintTop_toBottomOf="@id/rightTextView3" />
+
+            <ImageView
+                android:id="@+id/lineImageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rightTextView6" />
+
+            <TextView
+                android:id="@+id/winprobabilitytextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="100dp"
+                android:text="LIVE WIN PROBABILITY"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lineImageView2" />
+
+            <TextView
+                android:id="@+id/teamAprobabilitytextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Team A"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/winprobabilitytextview" />
+
+            <TextView
+                android:id="@+id/teamAprobabilitynumbertextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:text="77 %"
+                android:textColor="#E96B02"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/teamAprobabilitytextview" />
+
+            <TextView
+                android:id="@+id/teamBprobabilitytextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:text="Team B"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/winprobabilitytextview" />
+
+            <TextView
+                android:id="@+id/teamBprobabilitynumbertextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="40dp"
+                android:text="23 %"
+                android:textColor="#6EA541"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/teamBprobabilitytextview" />
+
+            <ProgressBar
+                android:id="@+id/horizontalProgressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="400dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="100dp"
+                android:indeterminate="true"
+                android:progressDrawable="@drawable/custom_horizontal_progressbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/teamAprobabilitynumbertextview" />
+
+            <Button
+                android:id="@+id/scoreboardbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_button_background"
+                android:backgroundTint="#0E394C"
+                android:text="Scoreboard"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontalProgressBar" />
+
+            <Button
+                android:id="@+id/trendingbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/rounded_buttons_background"
+                android:text="Trending"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontalProgressBar" />
+
+            <Button
+                android:id="@+id/commentrybutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/rounded_buttons_background"
+                android:text="Commentry"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/trendingbutton"
+                app:layout_constraintStart_toEndOf="@+id/scoreboardbutton"
+                app:layout_constraintTop_toBottomOf="@id/horizontalProgressBar" />
+
+            <ImageView
+                android:id="@+id/belowcommentrybuttonline"
+                android:layout_width="550dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/commentrybutton" />
+
+            <TextView
+                android:id="@+id/teamAbat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="10dp"
+                android:text="Team A"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/belowcommentrybuttonline" />
+
+            <TextView
+                android:id="@+id/teamBbat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="80dp"
+                android:text="Team B"
+                android:textColor="@color/black"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/belowcommentrybuttonline" />
+
+            <ImageView
+                android:id="@+id/teamAball"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ball"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/belowcommentrybuttonline" />
+
+            <ImageView
+                android:id="@+id/teamBball"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="60dp"
+                android:src="@drawable/bat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/belowcommentrybuttonline" />
+
+            <ImageView
+                android:id="@+id/belowteamBballline"
+                android:layout_width="550dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/teamBball" />
+
+            <!-- Header Row -->
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:background="@color/lightgrey"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/belowteamBballline">
+
+                <!-- Player Header -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="Batsman"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <!-- M Header -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="R"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <!-- Runs Header -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="B"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <!-- Avg Header -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="4s"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="6s"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <!-- Runs Header -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="S/R"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/batsmanstatsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".Splashscreen"
+            android:exported="true"
+            android:label="KSL"
+            android:theme="@style/Theme.MyApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity">
+            <!-- No intent-filter needed for this activity as it won't be the launcher activity -->
+        </activity>
+        <activity
+            android:name=".Toogleactivity">
+            <!-- No intent-filter needed for this activity as it won't be the launcher activity -->
+        </activity>
+        <activity
+            android:name=".Matches">
+            <!-- No intent-filter needed for this activity as it won't be the launcher activity -->
+        </activity>
+        <activity
+            android:name=".Live">
+            <!-- No intent-filter needed for this activity as it won't be the launcher activity -->
+        </activity>
+        <activity
+            android:name=".Statistics">
+            <!-- No intent-filter needed for this activity as it won't be the launcher activity -->
+        </activity>
+        <activity
+            android:name=".Table">
+            <!-- No intent-filter needed for this activity as it won't be the launcher activity -->
+        </activity>
+        <activity
+            android:name=".SquadsActivity">
+            <!-- No intent-filter needed for this activity as it won't be the launcher activity -->
+        </activity>
+        <activity
+            android:name=".BowlingActivity">
+            <!-- No intent-filter needed for this activity as it won't be the launcher activity -->
+        </activity>
+        <activity
+            android:name=".Players">
+            <!-- No intent-filter needed for this activity as it won't be the launcher activity -->
+        </activity>
+    </application>
+
+</manifest>

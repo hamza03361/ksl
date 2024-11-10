@@ -1,0 +1,8 @@
+<!-- res/drawable/rectangle_shape.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/navbar"/> <!-- Set your desired color here -->
+    <corners android:radius="8dp"/> <!-- Optional: Set corner radius for rounded corners -->
+    <stroke
+        android:width="2dp"
+        android:color="#000000"/> <!-- Optional: Set border width and color -->
+</shape>

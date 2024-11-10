@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="#FAF9F6"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <!-- Batsman Name TextView -->
+            <TextView
+                android:id="@+id/batsmanNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Batsman Name"
+                android:textColor="#0E394C"
+                android:textStyle="bold" />
+
+            <!-- ConstraintLayout for Additional Info and Bowler Name -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- Additional Info TextView -->
+                <TextView
+                    android:id="@+id/additionalInfoTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="b"
+                    android:textColor="#0E394C"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <!-- Bowler TextView aligned to the right of Additional Info TextView -->
+                <TextView
+                    android:id="@+id/bowlerTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="Bowler Name"
+                    android:textColor="#0E394C"
+                    app:layout_constraintBottom_toBottomOf="@id/additionalInfoTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/additionalInfoTextView"
+                    app:layout_constraintTop_toTopOf="@id/additionalInfoTextView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+        <!-- Runs TextView -->
+    <TextView
+        android:id="@+id/runsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="R"
+        android:textColor="#0E394C"
+        android:textStyle="bold" />
+
+    <!-- Balls TextView -->
+    <TextView
+        android:id="@+id/ballsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="B"
+        android:textColor="#0E394C"/>
+
+    <!-- 4s TextView -->
+    <TextView
+        android:id="@+id/foursTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="4s"
+        android:textColor="#0E394C"/>
+
+    <!-- 6s TextView -->
+    <TextView
+        android:id="@+id/sixesTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="6s"
+        android:textColor="#0E394C"/>
+
+    <!-- Strike Rate TextView -->
+    <TextView
+        android:id="@+id/strikeRateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="S/R"
+        android:textColor="#0E394C"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

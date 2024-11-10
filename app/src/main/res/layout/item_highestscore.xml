@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <!-- Content Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="#D0E4D9"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <!-- Player Info Column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/playerpic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_background"
+                android:src="@drawable/team1" />
+
+            <TextView
+                android:id="@+id/playername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Player Name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dismissal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="Dismissal"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <!-- Runs Column -->
+        <TextView
+            android:id="@+id/sr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="500"
+            android:textStyle="bold" />
+
+        <!-- Avg Column -->
+        <TextView
+            android:id="@+id/hs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="50.0"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
